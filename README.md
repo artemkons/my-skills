@@ -5,7 +5,7 @@ Claude Code skills for Obsidian vaults.
 ## Install
 
 ```bash
-npx skills add github:<your-username>/obsidian-skills
+npx skills add git@github.com:artemkons/my-skills.git
 ```
 
 ## Skills
