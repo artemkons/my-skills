@@ -1,3 +1,8 @@
+---
+name: dump
+description: Capture an idea into the vault with auto-linking to related notes
+---
+
 Capture an idea into the vault.
 
 The user's idea is: $ARGUMENTS

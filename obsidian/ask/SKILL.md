@@ -1,3 +1,8 @@
+---
+name: ask
+description: Answer a question by searching and synthesizing your Obsidian vault
+---
+
 Answer a question using the vault as a knowledge base.
 
 The user's question is: $ARGUMENTS

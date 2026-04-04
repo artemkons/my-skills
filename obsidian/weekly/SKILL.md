@@ -1,3 +1,8 @@
+---
+name: weekly
+description: Review ideas from the last 7 days, find clusters and patterns, suggest what to develop further
+---
+
 Review ideas captured over the last 7 days and synthesize patterns.
 
 ## Steps
