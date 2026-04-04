@@ -7,17 +7,11 @@ Build a day plan from today's tasks, fit them into work blocks, and create Googl
 
 ## Work schedule
 
-Blocks run 10:00–19:00 with 20-min breaks between blocks. Breaks are NOT added to calendar — they stay as free windows.
+Work starts at 10:00, ends at 19:00. The rhythm is: **90 min work → 20 min break**, repeating until end of day. Breaks are NOT added to calendar — they stay as free windows.
 
-```
-Block 1:  10:00 – 11:30
-Block 2:  11:50 – 13:20
-Block 3:  13:40 – 15:10
-Block 4:  15:30 – 17:00
-Block 5:  17:20 – 18:50
-```
+Blocks are computed dynamically — do not hardcode them. The cursor starts at 10:00 and advances through work/break cycles. If an existing event occupies some time, the cursor jumps past it and the 90/20 rhythm continues from there.
 
-Total capacity: 450 min / day.
+Total capacity: ~450 min / day (5 full cycles).
 
 ## Steps
 
@@ -35,8 +29,11 @@ echo $today
 
 3. **Sort tasks** by priority: high → medium → low. Within same priority, due date ascending.
 
-4. **Pack tasks into blocks** using this algorithm:
+4. **Check existing GCal events** — before scheduling, fetch all events for the target day using gcal_list_events (timeMin=day 10:00, timeMax=day 19:00, timezone=Europe/Moscow). Build a list of occupied time ranges to avoid overlaps.
+
+5. **Pack tasks into blocks** using this algorithm:
    - Available slots: `[(10:00, 11:30), (11:50, 13:20), (13:40, 15:10), (15:30, 17:00), (17:20, 18:50)]`
+   - Subtract already occupied time ranges (from existing GCal events) from available slots
    - Track current position (slot index + minutes used in current slot)
    - For each task with `effort`:
      - If task fits in remaining time of current slot → schedule it there
