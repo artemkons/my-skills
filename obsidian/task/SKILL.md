@@ -14,6 +14,7 @@ Parse from the user's input (all optional except name):
 - **scheduled** — date in `YYYY-MM-DD` format
 - **due** — date in `YYYY-MM-DD` format
 - **effort** — estimated duration in minutes (e.g. `30`, `90`, `120`)
+- **human** — `true` if the task requires the user's personal action, `false` if it can be done without them (default: `true`)
 
 ## Steps
 
@@ -21,7 +22,7 @@ Parse from the user's input (all optional except name):
 
 2. **Create the file** using obsidian-cli:
 ```bash
-obsidian create path="tasks/<task name>.md" content="---\ntype: task\nstatus: todo\npriority: <priority>\nscheduled: <scheduled>\ndue: <due>\neffort: <effort>\nproject: \"[[<project>]]\"\n---\n" silent
+obsidian create path="tasks/<task name>.md" content="---\ntype: task\nstatus: todo\npriority: <priority>\nscheduled: <scheduled>\ndue: <due>\neffort: <effort>\nproject: \"[[<project>]]\"\nhuman: <human>\n---\n" silent
 ```
 
 If obsidian-cli fails, use the Write tool to create `tasks/<task name>.md` directly.
