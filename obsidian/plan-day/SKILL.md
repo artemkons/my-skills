@@ -5,6 +5,8 @@ description: Plan the day by fitting tasks into 90-min work blocks and pushing t
 
 Build a day plan from today's tasks, fit them into work blocks, and create Google Calendar events.
 
+When writing the plan into a daily note, prefer a `## Цели` block as the main high-signal summary of the day. Do not add a separate `## Фокус` block unless the user explicitly asks for it. Daily goals should be checked against the current week's goals before finalizing the plan.
+
 ## Work schedule
 
 Work starts at 10:00, ends at 19:00. The rhythm is: **90 min work → 20 min break**, repeating until end of day. Breaks are NOT added to calendar — they stay as free windows.
@@ -59,6 +61,12 @@ obsidian property:set name="gcal_event_id" value="<event_id>" file="<task name>"
    - Total capacity used vs 450 min
    - List overflow tasks that didn't fit
    - Warn if total effort exceeds capacity
+
+8. **If writing into the daily journal**:
+   - Read the current weekly note first and align the day's goals with the week's goals
+   - Prefer sections like `## Разбор вчера`, `## Сверка с неделей`, `## Цели`, `## План дня`, `## Итог дня`
+   - Treat `## Цели` as the main motivating and prioritizing block
+   - Do NOT add `## Фокус` unless the user explicitly requests that format
 
 ## Notes
 

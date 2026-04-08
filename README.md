@@ -31,6 +31,13 @@ Review ideas from the last 7 days. Finds clusters, loners, and suggests what to 
 /weekly
 ```
 
+### `obsidian/skill-maintainer`
+Updates skill instructions and keeps the source repo plus local installed copies in sync.
+
+```
+/skill-maintainer <what to change in the skills>
+```
+
 ## Idea schema
 
 Each idea note uses this frontmatter:

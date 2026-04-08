@@ -23,6 +23,8 @@ The user's question is: $ARGUMENTS
 5. **Format the response:**
    - Answer first, sources after
    - Reference notes as [[wikilinks]]
+   - When making specific claims, put the relevant [[wikilink]] or inline markdown link directly in the sentence or the bullet where that claim appears
+   - A bottom "sources" block is optional support, not a substitute for inline references
    - If the vault has conflicting or evolving thoughts on the topic, surface that tension
    - If the vault has nothing useful on the topic, say so plainly — don't make things up
 

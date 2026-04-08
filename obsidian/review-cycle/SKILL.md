@@ -28,6 +28,7 @@ Task: {task}
 
 Read the vault to understand existing context — search for related notes, check relevant files.
 Then perform the task. Return only the result (file content, analysis, plan, etc.) — no meta-commentary.
+When you rely on specific notes or external sources, weave references directly into the relevant sentences using [[wikilinks]] or inline markdown links instead of dumping all links only at the end.
 ```
 
 Save the response as `result`. Set `history = []`.
@@ -55,6 +56,7 @@ Review the result against the task. Check:
 - Does it fully accomplish the task?
 - Are there gaps, errors, or missing parts?
 - In Obsidian context: correct frontmatter, wikilinks to related notes, proper structure?
+- If the result makes concrete claims based on notes or external sources, are the links embedded near those claims rather than only collected at the bottom?
 
 If the result is good enough — respond with exactly: APPROVED
 If not — respond with a numbered list of specific, actionable issues only. No praise.
@@ -81,6 +83,7 @@ Full history of previous attempts:
 {history}
 
 Fix the result. Address every reviewer issue. Do not introduce new problems.
+Keep references close to the claims they support: use [[wikilinks]] and inline markdown links in the body where they are relevant, not only as a bottom source dump.
 Return only the fixed result — no meta-commentary.
 ```
 
